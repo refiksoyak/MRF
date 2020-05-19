@@ -207,7 +207,6 @@ class operations():
                                 headlength = 5,
                                 shrink = 0.05,
                                 linewidth = 2, color = 'cyan'))
-
       plt.subplot(1,2,2)
       plt.plot(attention_score[im_row*im_col])
       xlim_channel_length = channel_length + (5 - channel_length%5)
