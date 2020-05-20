@@ -139,10 +139,6 @@ class operations():
       return np.array(patches), np.array(patch_centers)
 
     return patches
-  
-  def pixel_maker(signal):
-    signal = signal.reshape(-1,1)
-    return signal
 
   def block_extracter(signal, block_size = 16):
 
