@@ -205,11 +205,8 @@ class operations():
                                 linewidth = 2, color = 'cyan'))
       plt.subplot(1,2,2)
       plt.plot(attention_score[im_row*im_col])
-      xlim_channel_length = channel_length + (5 - channel_length%5)
-      plt.xlim([0, xlim_channel_length])
-      plt.xticks(np.arange(0, xlim_channel_length+5, 5))
       plt.title("["+str(im_row)+","+str(im_col)+"]" + " pixels' attention scores for each channel")
-      plt.margins(0, 0)
+      
       plt.show()
       
     elif input_shape == 'patch' and patch is not None and patch_size is not None:
@@ -229,7 +226,7 @@ class operations():
       plt.plot(attention_score[patch])
 
       plt.title(str(patch)+"th patch attention scores for each channel")
-      plt.margins(0, 0)
+      
     
     else:
       print("Error: Check input type and required index: pixel or patch (and patch size)")
