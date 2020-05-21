@@ -195,7 +195,7 @@ class operations():
       true_image_pix_remarked[im_col, im_row] = np.max(true_image)*3
       
       plt.subplot(1, 2, 1)
-      plt.imshow(true_image_pix_remarked, vmin=0, vmax=np.max(true_image))
+      plt.imshow(true_image_pix_remarked, vmin=0, vmax=np.max(true_image), cmap='hot')
       plt.axis('off')
       plt.annotate("", xy=(im_row-1, im_col-1), xytext=(im_row-15, im_col-15),
                 arrowprops=dict(width = 5.,
@@ -217,7 +217,7 @@ class operations():
       #print("patch_row:"+ str(patch_row)+ " patch_col:"+ str(patch_col))
 
       plt.subplot(1, 2, 1)
-      plt.imshow(true_image, vmin=0, vmax=np.max(true_image))
+      plt.imshow(true_image, vmin=0, vmax=np.max(true_image), cmap='hot')
       rectangle = plt.Rectangle((patch_col, patch_row), patch_size, patch_size, linewidth=3, edgecolor='r', facecolor='none')
       plt.gca().add_patch(rectangle)
       plt.colorbar()
