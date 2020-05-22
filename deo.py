@@ -218,13 +218,14 @@ class operations():
 
       plt.subplot(1, 2, 1)
       plt.imshow(true_image, vmin=0, vmax=np.max(true_image), cmap='hot')
+      plt.axis('off')
       rectangle = plt.Rectangle((patch_col, patch_row), patch_size, patch_size, linewidth=3, edgecolor='w', facecolor='none')
       plt.gca().add_patch(rectangle)
       plt.colorbar()
 
       plt.subplot(1, 2, 2)
       plt.plot(attention_score[patch])
-      plt.axis('off')
+      
       plt.title(str(patch)+"th patch attention scores for each channel")
       
     
