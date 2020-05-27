@@ -29,7 +29,7 @@ class StopExecution(Exception):
 
 class operations():
 
-  def read_data(read_for, fold_number, signal_length = 2000, skip_size = 1): 
+  def read_data(read_for, test, train1, train2, signal_length = 2000, skip_size = 1): 
     #Here you have to choose one fold to load its data. 
     #Available data names: kl, tk, ir, ab, abd
     #In this project only kl, abd and ir subjest are used
@@ -38,21 +38,6 @@ class operations():
     #read_for: to return train data or test data. use read_for = 'train' or 'test'
     #signal_length: specifies length of signal, default = 2000
     #skip_size: specifies how many time point will be skipped. E.g: if skip_size =2, time points will get as 0,2,4,6.. so on
-
-    if fold_number == 1:
-      test1 = 'kl' 
-      train1 = 'abd'
-      train2 = 'ir'
-
-    elif fold_number == 2:
-      test1 = 'abd' 
-      train1 = 'kl'
-      train2 = 'ir'
-
-    elif fold_number == 3:
-      test1 = 'ir'
-      train1 = 'abd'
-      train2 = 'kl'
 
     filepath = '/content/drive/My Drive/KCL internship/Data/50_gb/'
     filepath2 = '/content/drive/My Drive/KCL internship/Data/50_gb/transposed_trials/transposed_trials_1/'
