@@ -62,10 +62,10 @@ class operations():
 
     elif read_for == 'test': #for test data, only 1 data will be return 
 
-      f1 = sio.loadmat(filepath + test1 + '_t1_t2_ground_truths.mat')
+      f1 = sio.loadmat(filepath + test + '_t1_t2_ground_truths.mat')
       T1_ab = f1['T1_LRI']
       T2_ab = f1['T2_LRI']
-      trial1_ab_signal = h5.File(filepath2 + test1 + '_trial1_transposed_1.mat','r')
+      trial1_ab_signal = h5.File(filepath2 + test + '_trial1_transposed_1.mat','r')
       signal_ab = trial1_ab_signal['Noisy_tps'] #Complex | matlab([a,b,c,d]) python([d,c,b,a])
       signal_ab = signal_ab[:, :, 0:signal_length:skip_size]
 
