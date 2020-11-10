@@ -91,7 +91,7 @@ class operations():
 
     elif out_type == 'complex':
       real_im = np.array([real,im])
-      real_im = np.moveaxis(real_im, 0, 3)
+      #real_im = np.moveaxis(real_im, 0, 3)
       return real_im
     
     print(out_type + 'is OK')
